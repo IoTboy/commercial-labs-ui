@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Intel Commercial IoT Workshop</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/new.css">
+        <!-- <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css"> -->
+        <!-- endbuild -->
+        <!-- Le styles -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+        
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+             <!-- <script src="http://getbootstrap.com/2.3.2/assets/js/html5shiv.js"></script> -->
+        <!-- <![endif]-\-> -->
+
+        <!-- Fav and touch icons -->
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png"> -->
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png"> -->
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png"> -->
+        <!-- <link rel="apple-touch-icon-precomposed" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png"> -->
+        <!-- <link rel="shortcut icon" href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png"> -->
+        
+    </head>
+    <body ng-app="angularjsApp" data-spy="scroll" data-target=".scrollspy"
+    >
+        <!--[if lte IE 8]>
+             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+             <![endif]-->
+        <!-- Fixed navbar -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>The Intel Commercial IoT Workshop</h1>
+                <h3><span class="fa fa-pencil"></span> Deploy Internet of Things Devices in your business</h3>
+                <h3><span class="fa fa-pencil"></span> Monitor your enterprise in real-time.</h3>
+                <h3><span class="fa fa-pencil"></span> Increase your insight, reduce your costs.</h3>
+                <a href="http://www.sitepoint.com/understanding-bootstraps-affix-scrollspy-plugins" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+        </div><!--end of .jumbotron-->
+
+        <!-- <div id="wrapper"> -->
+        <div class="container">
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-default navbar-fixed-top"> 
+                <div class="container"> 
+                    <div class="navbar-header"> 
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
+                            <span class="sr-only">Toggle navigation</span> 
+                            <span class="icon-bar"></span> 
+                            <span class="icon-bar"></span> 
+                            <span class="icon-bar"></span> 
+                        </button> 
+                        <a class="navbar-brand" href="#">Intel Commercial IoT Workshop</a> 
+                    </div> 
+                    <div id="navbar" class="navbar-collapse collapse"> 
+                        <ul class="nav navbar-nav"> 
+                            <li class="dropdown"> 
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-book icon-white"></i> Labs <span class="caret"></span></a> 
+                                <ul class="dropdown-menu"> 
+                                    <li><a href="#introduction">Introduction</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Intel Edison</li> 
+                                    <li><a href="#">Building Edge Devices</a></li> 
+                                    <li><a href="#">Connecting Edge Devices </a></li> 
+                                    <li role="separator" class="divider"></li> 
+                                    <li class="dropdown-header">Intel IoT Gateway</li> 
+                                    <li><a href="#">Monitoring Sensor Data</a></li> 
+                                    <li><a href="#">Administration Interfaces</a></li>
+                                    <li><a href="#">Conditional Based Monitoring</a></li>
+                                    <li><a href="#">Security: McAfee Embedded Control</a></li>
+                                    <li role="separator" class="divider"></li> 
+                                    <li><a href="#">Connecting to the Cloud</a></li> 
+                                </ul> 
+                            </li> 
+                        </ul> 
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href=""><i class="fa fa-hand-stop-o"></i> Raise Hand for Instructor</a></li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-external-link"></i> Links <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://software.intel.com/iot">Intel Software: IoT Zone</a></li>
+                                    <li><a href="https://software.intel.com/en-us/iot/software/installers">Intel® Edison Software</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header"><i class="fa fa-github"></i> GitHub Repositories</li> 
+                                    <li><a href="https://github.com/intel-iot-devkit/mraa">MRAA libraries</a></li>
+                                    <li><a href="https://github.com/intel-iot-devkit/upm">UPM libraries</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header"><i class="fa fa-tachometer"></i> Sensors</li> 
+                                    <li><a href="http://iotdk.intel.com/docs/master/upm/modules.html">Sensor API Reference</a></li>
+                                </ul>
+                            </li>
+                            <li><a href=""><i class="fa fa-rocket"></i> Solutions</a></li>
+                            <li><a href=""><i class="fa fa-comments"></i> Chat</a></li>
+                            <li><a href=""><i class="fa fa-user"></i> Sign Up</a></li>
+                        </ul> 
+                    </div>
+                </div> 
+            </nav> 
+            
+            <div class="row">
+                <div class="col-md-3 scrollspy">
+                    <ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix">
+                        <li><a href="#introduction">Introduction</a></li>
+                        <!-- <li><a href="#web-development">Web Development</a> -->
+                        <!--     <ul class="nav"> -->
+                        <!--         <li><a href="#ruby"><span class="fa fa-angle-double-right"></span>Ruby</a></li> -->
+                        <!--         <li><a href="#python"><span class="fa fa-angle-double-right"></span>Python</a></li> -->
+                        <!--         <li><a href="#php"><span class="fa fa-angle-double-right"></span>PHP</a></li> -->
+                        <!--     </ul> -->
+                        <!-- </li> -->
+                        <li><a href="#build">Build Edge Devices</a></li>
+                        <li><a href="#connect">Connect Edge Devices</a></li>
+                        <li><a href="#gateway">Monitor Sensor Data</a></li>
+                        <li><a href="#admin">Administration Interface</a></li>
+                        <li><a href="#cbms">Conditional Based Monitoring</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#cloud">Connect to the Cloud</a></li>
+                </div>
+                <div class="col-md-9">
+                    <section id="introduction">
+                        <div ng-include src="'views/Module-1/index.html'"></div>
+                    </section>
+                    <section id="build">
+                        <div ng-include src="'views/Module-2/index.html'"></div>
+                    </section>
+                    <section id="connect">
+                        <div ng-include src="'views/Module-3/index.html'"></div>
+                    </section>
+                    <section id="gateway">
+                        <div ng-include src="'views/Module-4/index.html'"></div>
+                    </section>
+                    <section id="admin">
+                        <div ng-include src="'views/Module-5/index.html'"></div>
+                    </section>
+                    <section id="cbms">
+                        <div ng-include src="'views/Module-6/index.html'"></div>
+                    </section>
+                    <section id="security">
+                        <div ng-include src="'views/Module-7/index.html'"></div>
+                    </section>
+                    <section id="cloud">
+                        <div ng-include src="'views/Module-8/index.html'"></div>
+                    </section>
+                </div>
+                
+            </div><!--end of .row-->
+        </div><!--end of .container-->
+
+
+
+
+
+
+
+
+
+
+        <!--     <\!-- Sidebar -\-> -->
+        <!--     <div id="sidebar-wrapper"> -->
+        <!--         <ul class="sidebar-nav"> -->
+        <!--             <li class="sidebar-brand"> -->
+        <!--                 <a href="#"><img src="../images/intel_logo.png"></a> -->
+        <!--             </li> -->
+        <!--             <li> -->
+        <!--                 <a ui-sref="home">Table of Contents</a> -->
+        <!--             </li> -->
+        <!--             <li> -->
+        <!--                 <a ui-sref="introduction">Introduction</a> -->
+        <!--             </li> -->
+        <!--             <li> -->
+        <!--                 <a ui-sref="build">Build Edge Devices</a> -->
+        <!--             </li> -->
+        <!--             <li> -->
+        <!--                 <a ui-sref="connect">Connect Edge Devices</a> -->
+        <!--             </li> -->
+        <!--             <li> -->
+        <!--                 <a ui-sref="gateway">Gateway Sensor Management</a> -->
+        <!--             </li> -->
+        <!--             <li> -->
+        <!--                 <a ui-sref="admin">Administration Interface</a> -->
+        <!--             </li> -->
+        <!--             <li> -->
+        <!--                 <a ui-sref="cbms">Conditional Based Monitoring</a> -->
+        <!--             </li> -->
+        <!--             <li> -->
+        <!--                 <a ui-sref="security">Security</a> -->
+        <!--             </li> -->
+        <!--             <\!-- <li> -\-> -->
+        <!--             <\!--     <a href="#Module-8/index">Connect to the Cloud</a> -\-> -->
+        <!--             <\!-- </li> -\-> -->
+        <!--         </ul> -->
+        <!--     </div> -->
+        <!--     <\!-- /#sidebar-wrapper -\-> -->
+
+        <!--     <\!-- Page Content -\-> -->
+        <!--     <div id="page-content-wrapper"> -->
+        <!--         <div class="container-fluid"> -->
+        <!--             <div class="row"> -->
+        <!--                 <div class="col-lg-12"> -->
+
+        <!--                     <div ui-view></div> -->
+        <!--                     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> -->
+        <!--                 </div> -->
+        <!--             </div> -->
+        <!--         </div> -->
+        <!--     </div> -->
+        <!--     <\!-- /#page-content-wrapper -\-> -->
+        <!-- </div> -->
+
+        <script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+        <!-- Menu Toggle Script -->
+
+        <script>
+         $("#menu-toggle").click(function(e) {
+             e.preventDefault();
+             $("#wrapper").toggleClass("toggled");
+         });
+         $('#nav').affix({
+             offset: {
+                 top: $('#nav').offset().top - 60
+             }
+         });
+        </script>
+    </body>
+</html>
