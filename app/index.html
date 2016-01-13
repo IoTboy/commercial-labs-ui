@@ -31,13 +31,20 @@
         <!-- <link rel="shortcut icon" href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png"> -->
         
     </head>
-    <body ng-app="angularjsApp" data-spy="scroll" data-target=".scrollspy"
-    >
+    <body ng-app="angularjsApp" data-spy="scroll" data-target=".scrollspy">
         <!--[if lte IE 8]>
              <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
              <![endif]-->
 
-        <div ng-include="views/jumbotron.html">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>The Intel Commercial IoT Workshop</h1>
+                <h3><span class="fa fa-pencil"></span> Deploy Internet of Things Devices in your business</h3>
+                <h3><span class="fa fa-pencil"></span> Monitor your enterprise in real-time.</h3>
+                <h3><span class="fa fa-pencil"></span> Increase your insight, reduce your costs.</h3>
+                <a href="http://www.sitepoint.com/understanding-bootstraps-affix-scrollspy-plugins" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+        </div><!--end of .jumbotron-->
 
         <!-- <div id="wrapper"> -->
         <div class="container">
@@ -52,23 +59,23 @@
                             <span class="icon-bar"></span> 
                         </button> 
                         <a class="navbar-brand" href="#">Intel Commercial IoT Workshop</a> 
-                    </div> 
+                    </div>
                     <div id="navbar" class="navbar-collapse collapse"> 
                         <ul class="nav navbar-nav"> 
                             <li class="dropdown"> 
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-book icon-white"></i> Labs <span class="caret"></span></a> 
                                 <ul class="dropdown-menu"> 
-                                    <li><a href="#introduction">Introduction</a></li>
+                                    <li><a href="#introduction">introduction</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Intel Edison</li> 
-                                    <li><a href="#">Building Edge Devices</a></li> 
-                                    <li><a href="#">Connecting Edge Devices </a></li> 
+                                    <li class="dropdown-header">intel edison</li> 
+                                    <li><a href="#build-connected-devices">Building Edge Devices</a></li> 
+                                    <li><a href="#connect-devices">Connecting Edge Devices </a></li> 
                                     <li role="separator" class="divider"></li> 
                                     <li class="dropdown-header">Intel IoT Gateway</li> 
-                                    <li><a href="#">Monitoring Sensor Data</a></li> 
-                                    <li><a href="#">Administration Interfaces</a></li>
-                                    <li><a href="#">Conditional Based Monitoring</a></li>
-                                    <li><a href="#">Security: McAfee Embedded Control</a></li>
+                                    <li><a href="#monitoring-sensors">Monitoring Sensor Data</a></li> 
+                                    <li><a href="#administration-interface">Administration Interfaces</a></li>
+                                    <li><a href="#cbms">Conditional Based Monitoring</a></li>
+                                    <li><a href="#security">Security: McAfee Embedded Control</a></li>
                                     <li role="separator" class="divider"></li> 
                                     <li><a href="#">Connecting to the Cloud</a></li> 
                                 </ul> 
@@ -109,104 +116,45 @@
                         <!--         <li><a href="#php"><span class="fa fa-angle-double-right"></span>PHP</a></li> -->
                         <!--     </ul> -->
                         <!-- </li> -->
-                        <li><a href="#build">Build Edge Devices</a></li>
-                        <li><a href="#connect">Connect Edge Devices</a></li>
-                        <li><a href="#gateway">Monitor Sensor Data</a></li>
-                        <li><a href="#admin">Administration Interface</a></li>
+                        <li><a href="#build-connected-devices">Build Edge Devices</a></li>
+                        <li><a href="#connect-devices">Connect Edge Devices</a></li>
+                        <li><a href="#monitoring-sensors">Monitor Sensor Data</a></li>
+                        <li><a href="#administration-interface">Administration Interface</a></li>
                         <li><a href="#cbms">Conditional Based Monitoring</a></li>
                         <li><a href="#security">Security</a></li>
-                        <li><a href="#cloud">Connect to the Cloud</a></li>
+                       
                 </div>
+
                 <div class="col-md-9">
-                    <section id="introduction">
-                        <div ng-include src="'views/Module-1/index.html'"></div>
-                    </section>
-                    <section id="build">
-                        <div ng-include src="'views/Module-2/index.html'"></div>
-                    </section>
-                    <section id="connect">
-                        <div ng-include src="'views/Module-3/index.html'"></div>
-                    </section>
-                    <section id="gateway">
-                        <div ng-include src="'views/Module-4/index.html'"></div>
-                    </section>
-                    <section id="admin">
-                        <div ng-include src="'views/Module-5/index.html'"></div>
-                    </section>
-                    <section id="cbms">
-                        <div ng-include src="'views/Module-6/index.html'"></div>
-                    </section>
-                    <section id="security">
-                        <div ng-include src="'views/Module-7/index.html'"></div>
-                    </section>
-                    <section id="cloud">
-                        <div ng-include src="'views/Module-8/index.html'"></div>
+                    <div ui-view></div>
+                    <!-- <section id="introduction"> -->
+                    <!--     <div ng-include src="'views/Module-1/index.html'"></div> -->
+                    <!-- </section> -->
+                    <!-- <section id="build"> -->
+                    <!--     <div ng-include src="'views/Module-2/index.html'"></div> -->
+                    <!-- </section> -->
+                    <!-- <section id="connect"> -->
+                    <!--     <div ng-include src="'views/Module-3/index.html'"></div> -->
+                    <!-- </section> -->
+                    <!-- <section id="gateway"> -->
+                    <!--     <div ng-include src="'views/Module-4/index.html'"></div> -->
+                    <!-- </section> -->
+                    <!-- <section id="admin"> -->
+                    <!--     <div ng-include src="'views/Module-5/index.html'"></div> -->
+                    <!-- </section> -->
+                    <!-- <section id="cbms"> -->
+                    <!--     <div ng-include src="'views/Module-6/index.html'"></div> -->
+                    <!-- </section> -->
+                    <!-- <section id="security"> -->
+                    <!--     <div ng-include src="'views/Module-7/index.html'"></div> -->
+                    <!-- </section> -->
+                    <!-- <section id="cloud"> -->
+                    <!--     <div ng-include src="'views/Module-8/index.html'"></div> -->
                     </section>
                 </div>
                 
             </div><!--end of .row-->
         </div><!--end of .container-->
-
-
-
-
-
-
-
-
-
-
-        <!--     <\!-- Sidebar -\-> -->
-        <!--     <div id="sidebar-wrapper"> -->
-        <!--         <ul class="sidebar-nav"> -->
-        <!--             <li class="sidebar-brand"> -->
-        <!--                 <a href="#"><img src="../images/intel_logo.png"></a> -->
-        <!--             </li> -->
-        <!--             <li> -->
-        <!--                 <a ui-sref="home">Table of Contents</a> -->
-        <!--             </li> -->
-        <!--             <li> -->
-        <!--                 <a ui-sref="introduction">Introduction</a> -->
-        <!--             </li> -->
-        <!--             <li> -->
-        <!--                 <a ui-sref="build">Build Edge Devices</a> -->
-        <!--             </li> -->
-        <!--             <li> -->
-        <!--                 <a ui-sref="connect">Connect Edge Devices</a> -->
-        <!--             </li> -->
-        <!--             <li> -->
-        <!--                 <a ui-sref="gateway">Gateway Sensor Management</a> -->
-        <!--             </li> -->
-        <!--             <li> -->
-        <!--                 <a ui-sref="admin">Administration Interface</a> -->
-        <!--             </li> -->
-        <!--             <li> -->
-        <!--                 <a ui-sref="cbms">Conditional Based Monitoring</a> -->
-        <!--             </li> -->
-        <!--             <li> -->
-        <!--                 <a ui-sref="security">Security</a> -->
-        <!--             </li> -->
-        <!--             <\!-- <li> -\-> -->
-        <!--             <\!--     <a href="#Module-8/index">Connect to the Cloud</a> -\-> -->
-        <!--             <\!-- </li> -\-> -->
-        <!--         </ul> -->
-        <!--     </div> -->
-        <!--     <\!-- /#sidebar-wrapper -\-> -->
-
-        <!--     <\!-- Page Content -\-> -->
-        <!--     <div id="page-content-wrapper"> -->
-        <!--         <div class="container-fluid"> -->
-        <!--             <div class="row"> -->
-        <!--                 <div class="col-lg-12"> -->
-
-        <!--                     <div ui-view></div> -->
-        <!--                     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> -->
-        <!--                 </div> -->
-        <!--             </div> -->
-        <!--         </div> -->
-        <!--     </div> -->
-        <!--     <\!-- /#page-content-wrapper -\-> -->
-        <!-- </div> -->
 
         <script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>

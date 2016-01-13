@@ -20,9 +20,6 @@ angular
         'ngTouch',
         'ui.codemirror'
     ])
-
-
-
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/");
 
@@ -42,26 +39,28 @@ angular
                 templateUrl: 'views/Module-2/index.html',
             })
             .state('connect', {
-                url: "/Module-3/connect-devices",
+                url: "/connect-devices",
                 templateUrl: 'views/Module-3/index.html',
             })
             .state('gateway', {
-                url: "/Module-4/gateway",
+                url: "/monitoring-sensors",
                 templateUrl: 'views/Module-4/index.html',
             })
             .state('admin', {
-                url: "/Module-5/administration-interface",
+                url: "/administration-interface",
                 templateUrl: 'views/Module-5/index.html',
             })
             .state('cbms', {
-                url: "/Module-6/cbms",
+                url: "/cbms",
                 templateUrl: 'views/Module-6/index.html',
             })
             .state('security', {
-                url: "/Module-7/",
+                url: "/security",
                 templateUrl: 'views/Module-7/index.html',
             });
-    });
+    })
+    
+;
 
 
 // .config(function ($routeProvider) {
